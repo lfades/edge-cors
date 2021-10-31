@@ -2,6 +2,8 @@
 
 Enables CORS at the edge, works for [Vercel Edge Functions](https://vercel.com/features/edge-functions) (With the recently announced [Next.js Middleware](https://nextjs.org/blog/next-12#introducing-middleware)), [Deno](https://deno.com/), [Cloudflare Workers](https://developers.cloudflare.com/), and any environment with [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) support, specifically the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
+[![nest.land](https://nest.land/badge.svg)](https://nest.land/package/<your-module-name>)
+
 This module is a modified version of [expressjs/cors](https://github.com/expressjs/cors), which works for Node.js and should be your way to go if you're looking for Node.js support.
 
 ## How to use
