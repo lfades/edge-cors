@@ -19,3 +19,11 @@ await listenAndServe(':8080', (req) => {
   )
 })
 ```
+
+## How to use
+
+First, make sure to have [Deno](https://deno.land/) installed, then you can start the server like so:
+
+```bash
+deno run --allow-net main.ts
+```
