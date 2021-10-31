@@ -55,8 +55,6 @@ function getOriginHeaders(reqOrigin: string | undefined, origin: StaticOrigin) {
   return headers
 }
 
-// originHeadersFromReq
-
 async function originHeadersFromReq(
   req: Request,
   origin: StaticOrigin | OriginFn
