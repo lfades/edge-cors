@@ -1,6 +1,6 @@
 {
   "name": "edge-cors",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "CORS for edge workers, works with Next.js Middleware",
   "type": "module",
   "main": "dist/index.js",
