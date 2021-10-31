@@ -38,7 +38,7 @@ npm run build
 
 # or
 
-npm run watch
+npm run dev
 ```
 
 Then, install it in the example with:

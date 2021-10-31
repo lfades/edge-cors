@@ -169,7 +169,7 @@ npm run build
 
 # or
 
-npm run watch
+npm run dev
 ```
 
 To run the tests:
