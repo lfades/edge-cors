@@ -1,18 +1,103 @@
-type StaticOrigin = boolean | string | RegExp | (boolean | string | RegExp)[]
+// IMPORTANT: Adding imports to relative files can break things, because Deno
+// expects a file extension and TS doesn't know how to handle extensions.
 
-type OriginFn = (
+export type StaticOrigin =
+  | boolean
+  | string
+  | RegExp
+  | (boolean | string | RegExp)[]
+
+export type OriginFn = (
   origin: string | undefined,
   req: Request
 ) => StaticOrigin | Promise<StaticOrigin>
 
-interface CorsOptions {
+/**
+ * An Object will all possible options that can be passed to `cors`.
+ * The default options are:
+ *
+ * ```ts
+ * {
+ *  origin: '*',
+ *  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+ *  preflightContinue: false,
+ *  optionsSuccessStatus: 204,
+ * }
+ * ```
+ *
+ * {@link https://github.com/tajpouria/cors#configuration-options}
+ */
+export interface CorsOptions {
+  /**
+   * The value to match against the `Access-Control-Allow-Origin`
+   * header in the request. Defaults to `'*'`.
+   *
+   * It can be a boolean, string, a regular expression, an array of those, or
+   * a function that returns one of those.
+   *
+   * If set to `'*'` all origins will be allowed.
+   *
+   * If set to `true` then `Access-Control-Allow-Origin` will
+   * reflect the origin of the request.
+   *
+   * If set to `false` then all origins will be denied (`Access-Control-Allow-Origin`
+   * will not be set).
+   *
+   * If set to a regular expression then the request origin will be matched
+   * against it.
+   *
+   * If set to a function, it will receive the request origin string as the first
+   * parameter and the request as the second parameter. It can return a promise.
+   */
   origin?: StaticOrigin | OriginFn
+  /**
+   * Customizes the `Access-Control-Allow-Methods` header.
+   *
+   * It can be a string or an array of strings. Defaults to `'GET,HEAD,PUT,PATCH,POST,DELETE'`.
+   */
   methods?: string | string[]
+  /**
+   * Configures the `Access-Control-Allow-Headers` header.
+   *
+   * It can be a string or an array of strings.
+   * There's no default value (the header is omitted).
+   */
   allowedHeaders?: string | string[]
+  /**
+   * Configures the `Access-Control-Expose-Headers` header.
+   *
+   * It can be a string or an array of strings.
+   * There's no default value (the header is omitted).
+   */
   exposedHeaders?: string | string[]
+  /**
+   * Configures the `Access-Control-Allow-Credentials` header.
+   *
+   * It can be a boolean. But the header is only set if it is `true`.
+   * There's no default value (the header is omitted).
+   */
   credentials?: boolean
+  /**
+   * Configures the `Access-Control-Max-Age` header.
+   *
+   * Its value has to be an integer.
+   * There's no default value (the header is omitted).
+   */
   maxAge?: number
+  /**
+   * If `true`, `cors` will return the response with updated headers.
+   *
+   * If `false`, `cors` will return a new Response object with the status
+   * code set to the value of `optionsSuccessStatus` and a empty body.
+   *
+   * Defaults to `false`.
+   */
   preflightContinue?: boolean
+  /**
+   * Status code to use for OPTIONS requests when `preflightContinue` is disabled.
+   *
+   * Defaults to `204`.
+   */
   optionsSuccessStatus?: number
 }
 
