@@ -12,10 +12,16 @@ The module is available in npm, and as a Deno module. To install it from npm:
 npm i edge-cors
 ```
 
-And to use it in Deno:
+To install it in Deno there are two options, using [deno.land/x/edge_cors](https://deno.land/x/edge_cors):
 
 ```ts
-import cors from 'https://deno.land/x/edge_cors/src/cors.ts'
+import cors from 'https://deno.land/x/edge_cors@VERSION/src/cors.ts'
+```
+
+And using [nest.land/package/edge_cors](https://nest.land/package/edge_cors):
+
+```ts
+import cors from 'https://x.nest.land/edge_cors@VERSION/src/cors.ts'
 ```
 
 ### Basic Usage in Next.js
