@@ -169,6 +169,10 @@ function getAllowedHeaders(req: Request, allowed?: string | string[]) {
   return headers
 }
 
+/**
+ * Enables CORS support by changing the headers in the passed `res` and returns a
+ * Response object, usually the same `res`.
+ */
 export default async function cors(
   req: Request,
   res: Response,
@@ -225,6 +229,9 @@ export default async function cors(
   return res
 }
 
+/**
+ * Enables CORS support for given options, and returns a middleware function.
+ */
 export function initCors(options?: CorsOptions) {
   return (req: Request, res: Response) => cors(req, res, options)
 }
