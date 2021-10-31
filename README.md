@@ -1,6 +1,6 @@
 # Edge CORS
 
-Enables CORS at the edge, works for [Vercel Edge Functions](https://vercel.com/features/edge-functions), [Deno](https://deno.com/), [Cloudflare Workers](https://developers.cloudflare.com/), and any environment with [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) support, specifically the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+Enables CORS at the edge, works for [Vercel Edge Functions](https://vercel.com/features/edge-functions) (With the recently announced [Next.js Middleware](https://nextjs.org/blog/next-12#introducing-middleware)), [Deno](https://deno.com/), [Cloudflare Workers](https://developers.cloudflare.com/), and any environment with [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) support, specifically the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 This module is a modified version of [expressjs/cors](https://github.com/expressjs/cors), which works for Node.js and should be your way to go if you're looking for Node.js support.
 
@@ -14,8 +14,8 @@ npm i edge-cors
 
 And to use it in Deno:
 
-```bash
-
+```ts
+import cors from 'https://deno.land/x/edge-cors/index.ts'
 ```
 
 ### Basic Usage in Next.js
@@ -42,7 +42,7 @@ The full example is available in [examples/next](examples/next), and a live demo
 
 ```ts
 import { listenAndServe } from 'https://deno.land/std/http/server.ts'
-import cors from '../../src/index.ts'
+import cors from 'https://deno.land/x/edge-cors/index.ts'
 
 console.log('Listening on http://localhost:8080')
 

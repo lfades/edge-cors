@@ -4,7 +4,7 @@ Below is the code from [main.ts](main.ts):
 
 ```ts
 import { listenAndServe } from 'https://deno.land/std/http/server.ts'
-import cors from '../../src/index.ts'
+import cors from 'https://deno.land/x/edge-cors/index.ts'
 
 console.log('Listening on http://localhost:8080')
 
@@ -26,4 +26,12 @@ First, make sure to have [Deno](https://deno.land/) installed, then you can star
 
 ```bash
 deno run --allow-net main.ts
+```
+
+Your server should be up and running on http://localhost:8080
+
+To test the local build of `edge-cors` in the demo, change the import to `cors` in [main.ts](main.ts) to the following:
+
+```ts
+import cors from '../../src/index.ts'
 ```
