@@ -31,7 +31,7 @@ npm run dev
 
 Your app should be up and running on http://localhost:3000
 
-To test the local build of `edge-cors` package in the demo, start by building of the package:
+To test the local build of `edge-cors` in the demo, start by building the package:
 
 ```bash
 npm run build
