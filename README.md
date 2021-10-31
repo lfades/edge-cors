@@ -7,13 +7,21 @@ Enables CORS at the edge, works for [Vercel Edge Functions](https://vercel.com/f
 
 This module is a modified version of [expressjs/cors](https://github.com/expressjs/cors), which works for Node.js and should be your way to go if you're looking for Node.js support.
 
-## How to use
+## Installation
 
 The module is available in npm, and as a Deno module. To install it from npm:
 
 ```bash
 npm i edge-cors
 ```
+
+[Skypack](https://www.skypack.dev/view/edge-cors) is also an option, and works with [Next.js URL imports](https://nextjs.org/docs/api-reference/next.config.js/url-imports):
+
+```ts
+import cors from 'https://cdn.skypack.dev/edge-cors'
+```
+
+### Deno
 
 To install it in Deno there are two options, using [deno.land/x/edge_cors](https://deno.land/x/edge_cors):
 
@@ -26,6 +34,8 @@ And using [nest.land/package/edge_cors](https://nest.land/package/edge_cors):
 ```ts
 import cors from 'https://x.nest.land/edge_cors@VERSION/src/cors.ts'
 ```
+
+## How to use
 
 ### Basic Usage in Next.js
 
