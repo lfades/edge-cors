@@ -1,11 +1,11 @@
 import test from 'tape'
 import { Headers, Request, Response } from 'node-fetch'
-import cors from '../dist/index.js'
+import cors from '../dist/cors.js'
 
 // url to create the test Request object easier
 const url = new URL('https://vercel.com')
 
-// Add Web APIs to the global scope so dist/index.js can use them
+// Add Web APIs to the global scope so dist/cors.js can use them
 global.Headers = Headers
 global.Response = Response
 

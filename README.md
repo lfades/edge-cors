@@ -15,7 +15,7 @@ npm i edge-cors
 And to use it in Deno:
 
 ```ts
-import cors from 'https://deno.land/x/edge-cors/index.ts'
+import cors from 'https://deno.land/x/edge_cors/src/cors.ts'
 ```
 
 ### Basic Usage in Next.js
@@ -42,7 +42,7 @@ The full example is available in [examples/next](examples/next), and a live demo
 
 ```ts
 import { listenAndServe } from 'https://deno.land/std/http/server.ts'
-import cors from 'https://deno.land/x/edge-cors/index.ts'
+import cors from 'https://deno.land/x/edge_cors/src/cors.ts'
 
 console.log('Listening on http://localhost:8080')
 
@@ -78,7 +78,7 @@ For reference, the types used in the definition are linked below:
 
 ### CORS Options
 
-Defined as `CorsOptions` in [src/index.ts](src/index.ts), including JSDoc comments with the same docs from below. Defaults to:
+Defined as `CorsOptions` in [src/cors.ts](src/cors.ts), including JSDoc comments with the same docs from below. Defaults to:
 
 ```ts
 {

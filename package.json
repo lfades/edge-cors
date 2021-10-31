@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "description": "CORS for edge workers, works with Next.js Middleware",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cors.js",
+  "module": "dist/cors.js",
+  "types": "dist/cors.d.ts",
   "files": [
     "dist"
   ],

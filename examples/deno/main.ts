@@ -1,5 +1,5 @@
 import { listenAndServe } from 'https://deno.land/std/http/server.ts'
-import cors from 'https://deno.land/x/edge-cors/index.ts'
+import cors from 'https://deno.land/x/edge_cors/src/cors.ts'
 
 console.log('Listening on http://localhost:8080')
 
