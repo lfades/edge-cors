@@ -89,7 +89,7 @@ function cors(
 ): Promise<Response>
 ```
 
-For reference, the types used in the definition are linked below:
+For reference, the types used in the signature are linked below:
 
 - [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request)
 - [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
