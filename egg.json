@@ -4,19 +4,11 @@
   "entry": "./src/cors.ts",
   "description": "CORS for edge workers, including Next.js and Deno",
   "homepage": "https://github.com/lfades/edge-cors",
-  "version": "0.2.0",
   "releaseType": null,
   "unstable": false,
   "unlisted": false,
-  "files": [
-    "src",
-    "README.md",
-    "LICENSE"
-  ],
-  "ignore": [
-    "node_modules",
-    "dist"
-  ],
+  "files": ["src", "README.md", "LICENSE"],
+  "ignore": ["node_modules", "dist"],
   "checkFormat": false,
   "checkTests": false,
   "checkInstallation": false,
